@@ -1,0 +1,805 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Montserrat;
+    max-width:100%;
+}
+html{
+    scroll-behavior: smooth;
+}
+.lineSpacing{
+    color: white;
+}
+
+header {
+    width: 100%;
+    margin-top: 15px;
+    background-color: white;
+    border-top: 1px solid lightgrey; 
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    overflow-x: hidden;
+}
+header div {
+    margin-top: 10px;
+    flex-basis: 30%;
+    padding: 10px;
+    margin: 0px;
+}
+
+header div img {
+    width: 90%;
+}
+
+header div.hospDes {
+    flex: 9;
+    font-size: 300%;
+    font-family: 'Montserrat', sans-serif;
+}
+header div.hospLogo img{
+    height: 110px;
+    margin-left: 15px;
+}
+header div.hospDes{
+    margin-left: 20px;
+}
+
+header div.hospLogo {
+    flex: 1;
+}
+
+header div.headInfo {
+    display: flex;
+    flex-direction: column;
+    flex: 5;
+    background-color: white;
+    border-left: 1px solid rgb(228, 227, 227);
+}
+
+header div.headInfo div.phone {
+    flex: 3;
+    border-bottom: 1px solid rgb(228, 227, 227);
+    font-family: 'Montserrat', sans-serif;
+}
+
+#display{
+    display: inline;
+}
+#display:active{
+    cursor: pointer;
+    background-color: rgb(207, 206, 206);
+}
+
+.phone img, .opdTimes img{
+    width: 12px;
+}
+.location img{
+    width: 22px;
+    margin-left: -5px;
+    margin-bottom: -5px;
+}
+
+header div.headInfo div.opdTimes {
+    flex: 3;
+    border-bottom: 1px solid rgb(228, 227, 227);
+    font-family: 'Montserrat', sans-serif;
+}
+
+header div.headInfo div.location {
+    flex: 1;
+    font-family: 'Montserrat', sans-serif;
+}
+
+header div.headInfo div.location a{
+    border: none;
+    text-decoration: none;
+    background-color: white;
+    color: black;
+    border-radius: 5px;
+    padding: 2px 5px;
+    margin-left: 5px;
+    -webkit-transition: background 0s;
+    transition: background 1s;
+}
+header div.headInfo div.location a:hover{
+    cursor: pointer;
+    background-color: rgb(1, 36, 151);
+    color: white;
+}
+.navBlock{
+    position: sticky;
+    top: 0px;
+    z-index: 1000;
+}
+
+.navBar {
+    z-index: 1000;
+    overflow-x: hidden;
+    width: 100%;
+    background-color: rgb(236, 236, 236);
+    position: sticky;
+    top: 0px;
+}
+
+.mainMenu {
+    overflow: auto;
+    width: 100%;
+    display: flex;
+}
+
+.mainMenu li {
+    list-style: none;
+    padding: 15px;
+    margin: 6px;
+}
+
+.mainMenu li.link a {
+    display: inline-block;
+    text-decoration: none;
+    color: rgb(63, 63, 63);
+    font-size: 1.2rem;
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 4px;
+    margin: 0px 10px;
+}
+
+.mainMenu li.link a:hover {
+    color: black;
+    font-weight: bold;
+}
+.navBar .openMenu {
+    font-size: 2rem;
+    margin: 20px;
+    display: none;
+    cursor: pointer;
+}
+
+.mainMenu li.button {
+    background-color: rgb(236, 236, 236);
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+.mainMenu li.button a {
+    font-size: 1.2rem;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    background-color: forestgreen;
+    padding: 10px 15px 10px 15px;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    -webkit-transition: background 0s;
+    transition: background 1s;
+}
+
+.mainMenu li.button a:hover {
+    background-color: rgb(1, 36, 151);
+}
+.navBar .mainMenu .closeMenu , .icons i {
+    font-size: 2rem;
+    display: none;
+    cursor: pointer;
+}
+.fa-linkedin:hover {color: rgb(0, 110, 255);}
+.fa-instagram:hover {color: rgb(255, 0, 191);}
+.fa-github:hover {color: rgb(255, 123, 0);}
+.devs{
+    display: none;
+}
+.introBlock{
+    margin-top: 50px;
+    width:100%;
+    height: 550px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+}
+.introText{
+    background-color: rgba(252, 252, 252, 0.75);
+    width: 40%;
+    height: 300px;
+    margin-right: -350px;
+    z-index: 2;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+}
+.introTitle{
+    margin: 20px 10px;
+    padding: 10px;
+    font-size: 185%;
+    color:rgb(1, 25, 102);
+    font-weight: 200%;
+    animation: animate1 2s ease-in 1s 1;
+}
+
+@keyframes animate1 {
+    0%{
+        margin-bottom: 75px;
+    }
+    100%{
+        margin-bottom: 20px
+    }
+}
+.introTitle h1{
+    animation: text 2s 0.5s 1;
+    letter-spacing: 1px;
+}
+
+@keyframes text{
+    0%{
+        letter-spacing: 1px;
+        color: rgb(1, 25, 102);
+    }
+    50%{
+        letter-spacing: 5px;
+        color: forestgreen;
+    }
+    100%{
+        letter-spacing: 1px;
+        color: rgb(1, 25, 102);
+    }
+}
+
+.introDes{
+    margin: 0px 15px;
+    padding: 5px 10px;
+    line-height: 1.8;
+}
+
+.introImg{
+    width: 60%;
+    height: 500px;
+    border-radius: 25px;
+}
+.introImg img{
+    width: 100%;
+    height: 490px;
+    border-radius: 25px;
+}
+
+.scrolldown, .scrolldown3{
+    margin-left: 10vh;
+    width: 7%;
+    height: 100px;
+}
+.scrolldown img, .scrolldown2 img, .scrolldown3 img{
+    width: 100%;
+    height: 90px;
+}
+.scrolldown2{
+    margin-left: 185vh;
+    width: 7%;
+    height: 100px;
+}
+.scrolldown3{
+    margin: 10px 0px -55px 10vh;
+}
+.medproBlock{
+    display: flex;
+    flex-direction: column;
+    margin-top: -55px;
+    background-color: rgb(245, 245, 245);
+}
+.medproTitle{
+    margin: 80px 0px 30px 80px;
+}
+.medproTitle h1{
+    font-size: 250%;
+    color: rgb(1, 25, 104);
+}
+.medproDes{
+    width: 85%;
+    margin: 0px 0px 30px 80px;
+}
+.medproDes p{
+    margin-bottom: 20px;
+    line-height: 1.8;
+}
+.medprogrid{
+    margin: 50px 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    row-gap: 30px; column-gap: 30px;
+}
+.item{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 350px;
+}
+.itemText{
+    background-color: rgba(250, 250, 250, 0.85);
+    width: 40%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    z-index: 0;
+    border-radius: 25px;
+}
+.itemText:nth-child(odd){
+    margin-right: -275px;
+}
+.itemText:nth-child(even){
+    margin-left: -150px;
+}
+.itemTitle{
+    color: rgb(1, 25, 104);
+    margin: 20px 20px 10px 20px;
+    font-size: 120%;
+}
+.itemDes{
+    margin: 0px 20px 20px 20px;
+    line-height: 1.6;
+}
+
+.itemImg{
+    /* margin-left: 20px; */
+    width: 85%;
+    height: 350px;
+    border-radius: 25px;
+}
+.itemImg img{
+    width: 85%;
+    height: 350px;
+    border-radius: 25px;
+}
+.oddImg{
+    margin-left: 85px;
+}
+.oddImg img{
+    margin-left: 85px;
+}
+.roomBlock{
+    display: flex;
+    align-items: center;
+    margin: 50px 50px 0px 50px;
+}
+.roomBlock:nth-child(3), .roomBlock:nth-child(5){
+    display: flex;
+    flex-direction: row-reverse;
+}
+.roomText{
+    flex: 2;
+}
+.evenRoom{
+    margin-left: 35px;
+}
+.roomTitle{
+    font-size: 175%;
+    color: rgb(1, 25, 104);
+    margin: 10px;
+}
+.roomDes{
+    margin: 10px 30px 10px 10px;
+}
+.roomDes p{
+    line-height: 1.8;
+    text-align: justify;
+}
+.roomImg{
+    flex: 3;
+    width: 100%;
+    height: 400px;
+	margin:auto;
+	position: relative;
+	overflow: hidden;
+    border-radius: 30px;
+}
+.roomImg:nth-child(2){
+    height: auto;
+}
+.roomImg img{
+	width: 100%;
+	display: block;
+	animation:zoom 1s ease;
+}
+.slider{
+    flex: 3;
+	width: 100%;
+    height: 400px;
+	margin:auto;
+	position: relative;
+	overflow: hidden;
+    border-radius: 30px;
+}
+.gallerySlider{
+    width: 70%;
+    height: 450px;
+    flex: 1;
+    margin: 70px auto;
+}
+
+.slider .left-slide,.slider .right-slide{
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  background-color: white;
+  border-radius: 50%;
+  color: rgb(1, 25, 104);
+  font-size: 20px;
+  top:50%;
+  cursor: pointer;
+  margin-top: -20px;
+  text-align: center;
+  line-height: 40px;
+  
+}
+.slider .left-slide:hover,.slider .right-slide:hover{
+ box-shadow: 0px 0px 10px black;
+ background-color: #003953;
+ color: white;
+}
+
+.slider .left-slide{
+	left: 30px;
+}
+.slider .right-slide{
+	right: 30px;
+}
+.slider .slider-items .itemslider img{
+	width: 100%;
+	display: block;
+	animation:zoom 1s ease;
+}
+.linespacing{
+    visibility:hidden;
+}
+
+@keyframes zoom{
+	0%{transform: scale(2);opacity: 0}
+	50%{transform: scale(2);}
+	100%{transform: scale(1);opacity:1}
+}
+.slider .slider-items .itemslider{
+	display: none;
+	position: relative;
+}
+
+.slider .slider-items .itemslider.active{
+	display: block;
+}
+.galleryBlock{
+    background-color: rgba(240, 240, 240);
+    padding: 10px;
+}
+.galleryTitle h1{
+    margin: 20px 95vh;
+    font-size: 275%;
+    color: rgb(1, 25, 104);
+}
+.galleryDes{
+    width: 50%;
+    margin:  30px auto;
+}
+.galleryDes p{
+    line-height: 1.8;
+    align-items: justify;
+}
+div.contactBlock{
+    display: flex;
+    border-bottom: 1px solid rgb(200, 200, 200);
+}
+div.contactBlock div.contact{
+    flex: 2;
+    margin: 20px;
+    border-right: 1px solid rgb(218, 216, 216);
+}
+
+.contact img.phone{
+   position: relative;
+   top: 5px;
+   width: 15px;
+}
+.contact img.mail{
+   position: relative;
+   top: 8px;
+   right: 5px;
+   width: 27px;
+}
+
+div.contactBlock div.contact h1,  div.contactBlock div.disclaimer h1{
+    padding: 10px;
+    font-size: 170%;
+    margin-left: -10px;
+}
+div.contactBlock div.disclaimer{
+    flex: 3;
+    margin: 20px;
+}
+div.contactBlock div.disclaimer ol li{
+    list-style-type: lower-roman;
+}
+
+div.footer{
+    height: 40px;
+}
+ div.footer p.copyright{
+    margin-top: 20px;
+    position: relative;
+    left: 450px;
+ }
+ div.footer p.developers{
+     margin: 20px 10px 10px 10px;
+     position: relative;
+     left: 250px;
+ }
+ div.footer p.developers a{
+     text-decoration: none;
+     color: black;
+     padding: 5px 10px 5px 10px;
+     border-radius: 5px 0px 0px 5px;
+ }
+
+ div.footer p.developers a:nth-child(3), div.footer p.developers a:nth-child(4){
+     border-right: 2px solid rgb(196, 195, 195);
+ }
+
+ div.footer p.developers a:first-child:hover{
+     background-color: rgb(243, 243, 243);
+ }
+ div.topBtn{
+  z-index: 0;
+  padding: 0px 5px 0px 5px;
+  display: inline;
+  position: relative;
+  bottom: 85px;
+  right: 110px;
+  float: right;
+  border-radius: 5px;
+  background-color: white;
+}
+div.topBtn:hover{
+   background-color: rgb(1, 36, 151);
+}
+div.topBtn a{
+   font-weight: bold;
+   text-decoration: none;
+   font-size: 40px;
+   color:rgb(1, 36, 151);
+}
+div.topBtn a:hover{
+   cursor: pointer;
+   color: white;
+}
+
+
+@media(max-width: 550px){
+    header{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    header div.hospLogo img{
+        height: 38vh;
+    }
+    header div.headInfo div.location a{
+       cursor: pointer;
+       background-color: rgb(1, 36, 151);
+       color: white;
+   }
+   .scrolldown, .scrolldown2, .scrolldown3{
+       margin-left: 70vw;
+       width: 18%;
+       margin-bottom: -90px;
+   }
+   .scrolldown img, .scrolldown2 img, .scrolldown3 img{
+       height: 70px;
+   }
+   .introBlock{
+       display: block;
+       height: auto;
+       margin-top: 20px;
+   }
+   .introText{
+       background-color: white;
+       width: 95%;
+       margin: 10px;
+       padding: 10px;
+       height: auto;
+   }
+   .introTitle{
+       margin: 0px 15px;
+   }
+   .introDes{
+    text-align: justify;
+   }
+   .introImg{
+       display: none;
+   }
+   .medproBlock{
+       display: block;
+       margin: 15px;
+       background-color: rgb(240, 240, 240);
+       border-radius: 25px;
+   }
+   .medproTitle{
+       width: 95%;
+       margin: 30px;
+       padding-top: 20px;
+   }
+   .medproTitle h1{
+       width: 95%;
+   }
+   .medproDes{
+       width: 95%;
+       margin: 30px;
+       height: auto;
+   }
+   .medproDes p{
+       margin-right: 30px;
+       text-align: justify;
+       padding-bottom: 10px;
+   }
+   .medprogrid{
+       display: flex;
+       flex-direction: column;
+       margin: 0px 25px;
+   }
+   .item{
+       height: auto;
+   }
+   .itemText{
+       width: 65%;
+   }
+   .itemText:nth-child(odd){
+       margin-right: -275px;
+   }
+   .itemImg{
+       width: 90%;
+       margin-right: 20px;
+       height: auto;
+   }
+   .itemImg img{
+       width: 90%;
+       height: 275px;
+   }
+   .itemDes{
+       display: none;
+   }
+   .oddImg{
+    margin-left: 60px;
+}
+   .oddImg img{
+    margin-left: 60px;
+}
+.roomBlock{
+    flex-direction: column;
+    margin: 20px;
+}
+.roomBlock:nth-child(3), .roomBlock:nth-child(5){
+    flex-direction: column;
+    background-color: rgb(240, 240, 240);
+    border-radius: 25px;
+}
+.evenRoom{
+    margin: 20px;
+}
+.galleryBlock{
+    padding: 0px;
+    margin: 20px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+.galleryTitle h1{
+    margin: 20px 25vw;
+}
+.galleryDes{
+    width: 75%;
+}
+.galleryDes p{
+    text-align: justify; 
+}
+.slider{
+    width: 100%;
+    height: auto;
+}
+.gallerySlider{
+    margin: 0px auto;
+}
+   div.contactBlock{
+    flex-direction: column;
+}
+div.contactBlock div.contact{
+    border-right: 1px solid white;
+}
+div.footer{
+    height: auto;
+}
+div.footer p.copyright, div.footer p.developers{
+    position: relative;
+    left: auto;
+    margin-top: 30px;
+    margin-left: 20px;
+}
+div.footer p.developers a{
+    display: block;
+    margin: 5px 0px 5px -10px;
+    background-color: rgb(238, 238, 238);
+}
+div.footer p.developers a:nth-child(2), div.footer p.developers a:nth-child(3){
+    border-right: none;
+}
+div.topBtn{
+    position: relative;
+    bottom: 145px;
+    right: 20px;
+    background-color: rgb(1, 36, 151);
+}
+div.topBtn a{
+    cursor: pointer;
+    color: white;
+}
+}
+
+@media(max-width: 1140px)
+{
+    .navBar{
+        background-color: rgb(1, 26, 102);
+    }
+    .navBar .mainMenu {
+        height: 100vh;
+        position: fixed;
+        top: -125%;
+        right: 0;
+        left: 0;
+        z-index: 1000;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: rgb(1, 26, 102);
+        transition: top 1s ease;
+        display: flex;
+    }
+    .navBar .mainMenu .closeMenu {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        z-index: 1000;
+
+    }
+    .navBar .openMenu {
+        display: block;
+        color: white;
+    }
+    .navBar .openMenu:hover{
+        background-color: rgb(1, 26, 102);
+    }
+    .navBar .mainMenu li a{
+        color: white;
+    }
+    .navBar .mainMenu li a:hover {
+        background: none;
+        color: rgb(255, 123, 0);
+    }
+    .navBar ul li.button a{
+        background-color: transparent;
+        color: rgb(0, 90, 0);
+        font-weight: bold;
+    }
+    .devs{
+        display: block;
+        color: white;
+        padding-top: 20px;
+        font-family: 'Montserrat';
+        border-top: 1px solid white;
+    }
+    .closeMenu{
+        color: white;
+    }
+    .icons i {
+        display: inline-block;
+        padding: 12px;
+        color: white;
+    }
+    .medproTitle h1, .galleryTitle h1{
+        margin-top: 60px;
+    }
+}
+    

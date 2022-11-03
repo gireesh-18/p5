@@ -1,0 +1,931 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+.lineSpacing{
+    visibility: hidden;
+}
+
+header {
+    width: 100%;
+    margin-top: 15px;
+    background-color: white;
+    border-top: 1px solid lightgrey; 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    overflow-x: hidden;
+}
+header div {
+    margin-top: 10px;
+    flex-basis: 30%;
+    padding: 10px;
+    margin: 0px;
+}
+
+header div img {
+    width: 90%;
+}
+
+header div.hospDes {
+    flex: 9;
+    font-size: 250%;
+    font-family: 'Montserrat', sans-serif;
+}
+
+header div.hospLogo {
+    flex: 1;
+}
+header div.hospLogo img{
+    height: 110px;
+    margin-left: 15px;
+}
+header div.hospDes{
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+header div.headInfo {
+    display: flex;
+    flex-direction: column;
+    flex: 5;
+    background-color: white;
+    border-left: 1px solid rgb(228, 227, 227);
+}
+
+header div.headInfo div.phone {
+    flex: 3;
+    border-bottom: 1px solid rgb(228, 227, 227);
+    font-family: 'Montserrat', sans-serif;
+}
+#display{
+    display: inline;
+}
+#display:active{
+    cursor: pointer;
+    background-color: rgb(207, 206, 206);
+}
+
+
+.phone img, .opdTimes img{
+    width: 12px;
+}
+.location img{
+    width: 22px;
+    margin-left: -5px;
+    margin-bottom: -5px;
+}
+
+header div.headInfo div.opdTimes {
+    flex: 3;
+    border-bottom: 1px solid rgb(228, 227, 227);
+    font-family: 'Montserrat', sans-serif;
+}
+
+header div.headInfo div.location {
+    flex: 1;
+    font-family: 'Montserrat', sans-serif;
+}
+
+header div.headInfo div.location a{
+    border: none;
+    text-decoration: none;
+    background-color: white;
+    color: black;
+    border-radius: 5px;
+    padding: 2px 5px;
+    margin-left: 5px;
+    -webkit-transition: background 0s;
+    transition: background 1s;
+}
+header div.headInfo div.location a:hover{
+    cursor: pointer;
+    background-color: rgb(1, 36, 151);
+    color: white;
+}
+.navBlock{
+    position: sticky;
+    top: 0px;
+    z-index: 1000;
+}
+
+.navBar {
+    z-index: 1000;
+    overflow-x: hidden;
+    width: 100%;
+    background-color: rgb(236, 236, 236);
+    position: sticky;
+    top: 0px;
+}
+
+.mainMenu {
+    overflow: auto;
+    width: 100%;
+    display: flex;
+}
+
+.mainMenu li {
+    list-style: none;
+    padding: 15px;
+    margin: 6px;
+}
+
+.mainMenu li.link a {
+    display: inline-block;
+    text-decoration: none;
+    color: rgb(63, 63, 63);
+    font-size: 1.2rem;
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 4px;
+    margin: 0px 10px;
+}
+
+.mainMenu li.link a:hover {
+    color: black;
+    font-weight: bold;
+}
+.navBar .openMenu {
+    font-size: 2rem;
+    margin: 20px;
+    display: none;
+    cursor: pointer;
+}
+
+.mainMenu li.button {
+    background-color: rgb(236, 236, 236);
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+.mainMenu li.button a {
+    font-size: 1.2rem;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    background-color: forestgreen;
+    padding: 10px 15px 10px 15px;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    -webkit-transition: background 0s;
+    transition: background 1s;
+}
+
+.mainMenu li.button a:hover {
+    background-color: rgb(1, 36, 151);
+}
+.navBar .mainMenu .closeMenu , .icons i {
+    font-size: 2rem;
+    display: none;
+    cursor: pointer;
+}
+.fa-linkedin:hover {color: rgb(0, 110, 255);}
+.fa-instagram:hover {color: rgb(255, 0, 191);}
+.fa-github:hover {color: rgb(255, 123, 0);}
+.devs{
+    display: none;
+}
+
+section {
+    margin: 5px;
+    padding: 10px;
+    overflow-x: hidden;
+    font-family: 'Montserrat', sans-serif;
+}
+
+div.homeSec {
+    display: flex;
+    padding-top: 20px;
+}
+
+div.homeSec div.homeLeft {
+    margin: 10px;
+    padding: 10px;
+    flex: 1;
+}
+
+div.homeSec div.homeLeft div.homeTitle h1 {
+    margin: 5px 0px 20px 0px;
+    font-size: 300%;
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(1, 25, 104);
+    animation: downway 3s ease-in-out 0.5s 1;
+}
+@keyframes downway{
+    0%{
+        margin-bottom: -10px;
+    }
+    75%{
+        margin-bottom: 20px;
+    }
+}
+
+div.homeSec div.homeLeft div.homeTitle p {
+    margin: 5px 0px 20px 0px;
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(107, 107, 107);
+    line-height: 1.6;
+    text-align: justify;
+}
+
+div.homeSec div.homeLeft div.homeDoctor {
+    display: flex;
+    width: 100%;
+    background-color: white;
+}
+
+div.homeSec div.homeLeft div.homeDoctor div.homeDocLogo img {
+    width: 90px;
+    height: 75px;
+    margin: 10px 10px 10px 15px;
+    border-radius: 20%;
+}
+
+div.homeSec div.homeLeft div.homeDoctor div.homeDocDes {
+    margin: 10px;
+}
+
+div.homeSec div.homeLeft div.homeDoctor div.homeDocDes h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 110%;
+}
+
+div.homeSec div.homeLeft div.homeDoctor div.homeDocDes p {
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(90, 90, 90);
+}
+
+div.homeSec div.homeRight {
+    flex: 1;
+    border-radius: 30px;;
+}
+
+div.homeSec div.homeRight img {
+    width: 100%;
+    border-radius:30px;
+}
+.scrolldown2{
+    margin-left: 80%;
+    margin-bottom: -75px;
+    width: 7%;
+    height: 100px;
+}
+
+.scrolldown2 img{
+    width: 100%;
+    height: 90px;
+}
+
+div.aboutSec {
+    display: flex;
+    flex-direction: row-reverse;
+    background-color: rgb(245, 245, 245);
+    border-radius: 25px;
+}
+
+div.aboutSec div.aboutLeft {
+    margin: 10px;
+    padding: 10px;
+    flex: 2;
+}
+
+div.aboutSec div.aboutLeft div.aboutTitle h1 {
+    margin: 5px 0px 20px 0px;
+    font-size: 300%;
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(1, 25, 104);
+}
+
+div.aboutSec div.aboutLeft div.aboutTitle p {
+    margin: 5px 0px 20px 0px;
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(107, 107, 107);
+    line-height: 1.6;
+    text-align: justify;
+}
+
+div.aboutSec div.aboutLeft div.aboutDoctor {
+    display: flex;
+    width: 60%;
+    background-color: white;
+}
+
+div.aboutSec div.aboutLeft div.aboutDoctor div.aboutDocLogo img {
+    width: 60px;
+    height: 60px;
+    margin: 10px 20px 10px 5px;
+}
+
+div.aboutSec div.aboutLeft div.aboutDoctor div.aboutDocDes {
+    margin: 10px;
+}
+
+div.aboutSec div.aboutLeft div.aboutDoctor div.aboutDocDes h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 110%;
+}
+
+div.aboutSec div.aboutLeft div.aboutDoctor div.aboutDocDes p {
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(90, 90, 90);
+}
+
+div.aboutSec div.aboutRight {
+    margin-right: 10px;
+    margin-top: 50px;
+    border-radius: 25px;
+}
+
+div.aboutSec div.aboutRight img {
+    width: 650px;
+    border-radius: 25px;
+}
+.gotoservices{
+    padding: 15px;
+    background-color: rgb(248, 245, 255);
+    color:rgb(1, 25, 104);
+    font-weight: bold;
+    display: inline-block;
+    margin: 5px 0px 5px 15px;
+    border-radius: 50px;
+}
+.gotoservices a{
+    text-decoration: none;
+    color:rgb(1, 25, 104);
+    font-size: 1.5rem;
+}
+.gotoservices a i{
+    margin-left: 5px;
+    font-size: 1.5rem;
+}
+
+div.servicesBlock{
+    display: flex;
+    justify-content: space-between;
+    border-radius: 25px;
+}
+div.servicesBlock div.section{
+    width: 31.5%;
+    background-color: rgb(245, 245, 245);
+    margin: 10px 5px 10px 5px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 25px;
+}
+div.serviceImg img{
+    width: 100%;
+    height: 250px;
+    border-radius: 25px;
+}
+div.techDes, div.roomDes, div.galleryDes{
+    margin: 5px;
+    padding: 5px;
+}
+div.techDes h1, div.roomDes h1, div.galleryDes h1{
+    font-size: 200%;
+    text-align: center;
+    margin: 5px;
+    padding: 10px 0px 10px 0px;
+}
+div.techDes h1 a, div.roomDes h1 a, div.galleryDes h1 a{
+    text-decoration: none;
+}
+div.techDes h1 a:hover, div.roomDes h1 a:hover, div.galleryDes h1 a:hover{
+    color: rgb(1, 95, 1);
+}
+div.techDes .clickhere, div.roomDes .clickhere, div.galleryDes .clickhere{
+    text-align: center;
+    margin-bottom: 15px;
+    font-style: italic;
+    color: black;
+}
+
+div.techDes p, div.roomDes p, div.galleryDes p{
+    margin: 5px;
+    text-align: justify;
+    color: rgb(88, 88, 88);
+    line-height: 1.6;
+}
+div.teamDocsTitle{
+    background-color: rgb(1, 36, 151);
+    border-radius: 15px;
+}
+div.teamDocsTitle h1{
+    font-size: 250%;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+div.teamDocs{
+    background-color: rgb(252, 252, 252);
+    margin-top: -15px;
+}
+div.drNilesh{
+    display: flex;
+    background-color: rgb(240, 240, 240);
+    width: 66%; height: 400px;
+    margin: 30px auto 30px auto;
+    border-radius: 25px;
+}
+div.drNileshImg{
+    flex: 1;
+    margin: auto 0px auto 60px;
+}
+div.drNileshImg img{
+    width: 400px;
+    height: 300px;
+    background-color: white;
+    border-radius: 25px;
+}
+div.drNileshDes{
+    flex: 1;
+    margin: 60px;
+}
+div.drNileshDes h1{
+    font-size: 170%;
+}
+.drNileshDes .desc{
+    line-height: 1.5;
+}
+
+div.visitDocsBlock1, div.visitDocsBlock2{
+    display: flex;
+    background-color: rgb(240, 240, 240);   
+    width: 95%; height: 450px;
+    margin: 0px auto 30px auto;
+    border-radius: 10px;
+}
+div.visitDocsBlock1 div.visitDocs, div.visitDocsBlock2 div.visitDocs{
+    background-color: white;
+    width: 31%;
+    height: 350px;
+    margin: auto 30px auto 30px;
+    padding: 10px;
+    border-radius: 10px;
+}
+div.visitDocsBlock1 div.visitDocs div.visitDocsImg, div.visitDocsBlock2 div.visitDocs div.visitDocsImg{
+    margin: 20px 30px auto 50px;
+}
+div.visitDocsBlock1 div.visitDocs div.visitDocsImg img, div.visitDocsBlock2 div.visitDocs div.visitDocsImg img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+div.visitDocsBlock1 div.visitDocs div.visitDocsDes, div.visitDocsBlock2 div.visitDocs div.visitDocsDes{
+    margin: 10px;
+}
+div.visitDocsBlock1 div.visitDocs div.visitDocsDes h1,
+div.visitDocsBlock1 div.visitDocs div.visitDocsDes p.title, 
+div.visitDocsBlock1 div.visitDocs div.visitDocsDes p.desc,
+div.visitDocsBlock2 div.visitDocs div.visitDocsDes h1,
+div.visitDocsBlock2 div.visitDocs div.visitDocsDes p.title, 
+div.visitDocsBlock2 div.visitDocs div.visitDocsDes p.desc{
+    text-align: center;
+}
+
+div.teamStaffTitle{
+    background-color: rgb(1, 36, 151);
+    border-radius: 15px;
+}
+div.teamStaffTitle h1{
+    font-size: 250%;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+div.chiefStaffBlock{
+    display: flex;
+    justify-content: center;
+}
+div.chiefStaffBlock div.chiefStaff{
+    display: flex;
+    background-color: rgb(240, 240, 240);
+    width: 40%; height: 200px;
+    margin: 30px;
+    border-radius: 10px;
+}
+div.chiefStaffBlock div.chiefStaff div.chiefStaffImg{
+    flex: 1;
+}
+div.chiefStaffBlock div.chiefStaff div.chiefStaffImg img{
+    width: 175px;
+    margin: 15px;
+    border-radius: 10px;
+}
+div.chiefStaffBlock div.chiefStaff div.chiefStaffDes{
+    flex: 1;
+    margin: auto 0px auto 0px;
+}
+div.chiefStaffBlock div.chiefStaff div.chiefStaffDes h1{
+    font-size: 200%;
+}
+div.staffBlock div.staff{
+    background-color: rgb(240, 240, 240);
+    margin: 30px auto 50px auto;
+    width: 1200px;
+    display: flex;
+    border-radius: 10px;
+}
+div.staffBlock div.staff div.staffImg{
+    flex: 3;
+}
+div.staffBlock div.staff div.staffImg img{
+    width: 800px;
+    height: 400px;
+    border-radius: 10px;
+}
+div.staffBlock div.staff div.staffDes{
+    flex: 2;
+    margin: auto 20px auto 20px;
+}
+div.staffBlock div.staff div.staffDes h1, 
+div.staffBlock div.staff div.staffDes p{
+    padding: 10px;
+}
+div.staffBlock div.staff div.staffDes h1{
+    font-size: 250%;
+}
+div.staffBlock div.staff div.staffDes p{
+    line-height: 1.6;
+}
+
+div.appointBlock{
+    display: flex;
+}
+div.appointDisc{
+    background-color: rgba(217, 217, 255, 0.2);
+    margin: 10px;
+    padding: 20px;
+    width: 50%;
+    border-radius: 10px;
+}
+div.appointDiscTitle h1{
+    margin: 20px;
+    font-size: 200%;
+    text-transform: uppercase;
+    color: rgb(189, 1, 1);
+}
+.charges{
+    margin-left: 20px;
+}
+.charges li{
+    font-weight: bolder;
+    font-size: 120%;
+    list-style-type: disc;
+}
+.note{
+    font-size: 120%;
+    color: red;
+}
+div.discList{
+    margin: 10px;
+}
+.discList .discPoints{
+    line-height: 1.6;
+    margin: 15px;
+    list-style-type:upper-latin;
+}
+div.appointForm{
+    margin: auto;
+}
+div.formTitle{
+    margin: 0px auto 150px auto;
+}
+div.formTitle h1{
+    font-size: 300%;
+}
+div.formContent{
+    margin-top: -100px;
+}
+label[for=name], label[for=phone], label[for=date], label[for=slot], select
+{
+    font-size: 130%;
+}
+input[type=text], input[type=tel], input[type=date], select {
+    width: 100%;
+    padding: 25px 20px;
+    margin: 8px 0px 15px 0px;
+    display: inline-block;
+    background-color: rgb(250, 250, 250);
+    border: 1px solid rgb(240, 240, 240);
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-family: Montserrat;
+  }
+  .case{
+    background-color: rgb(250, 250, 250);
+    border: 1px solid rgb(240, 240, 240);
+    padding: 20px 10px;
+    margin: 10px 0px;
+    border-radius: 4px;
+  }
+  input[type=radio]{
+      margin-right: 100px;
+  }
+  button[type=submit] {
+    width: 100%;
+    font-size: 110%;;
+    background-color: rgb(1, 36, 151);
+    color: white;
+    padding: 14px 20px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    -webkit-transition: background 0s;
+    transition: background 1s;
+  }
+  
+  button[type=submit]:hover {
+    background-color: forestgreen;
+  }
+
+  div.contactBlock{
+      display: flex;
+      border-bottom: 1px solid rgb(200, 200, 200);
+  }
+  div.contactBlock div.contact{
+      flex: 2;
+      margin: 20px;
+      border-right: 1px solid rgb(218, 216, 216);
+  }
+
+ .contact img.phone{
+     position: relative;
+     top: 5px;
+     width: 15px;
+ }
+ .contact img.mail{
+     position: relative;
+     top: 8px;
+     right: 5px;
+     width: 27px;
+     
+ }
+
+  div.contactBlock div.contact h1,  div.contactBlock div.disclaimer h1{
+      padding: 10px;
+      font-size: 170%;
+      margin-left: -10px;
+  }
+  div.contactBlock div.disclaimer{
+      flex: 3;
+      margin: 20px;
+  }
+  div.contactBlock div.disclaimer ol li{
+      list-style-type: lower-roman;
+      line-height: 1.5;
+      margin: 12px 0px;
+  }
+
+  div.footer{
+      height: 40px;
+  }
+   div.footer p.copyright{
+      margin-top: 20px;
+      position: relative;
+      left: 450px;
+   }
+   div.footer p.developers{
+       margin: 20px 10px 10px 10px;
+       position: relative;
+       left: 250px;
+   }
+   div.footer p.developers a{
+       text-decoration: none;
+       color: black;
+       padding: 5px 10px 5px 10px;
+       border-radius: 5px 0px 0px 5px;
+   }
+
+   div.footer p.developers a:nth-child(3), div.footer p.developers a:nth-child(4){
+       border-right: 2px solid rgb(196, 195, 195);
+   }
+
+   div.footer p.developers a:first-child:hover{
+       background-color: rgb(243, 243, 243);
+   }
+   div.topBtn{
+    z-index: 0;
+    padding: 0px 5px 0px 5px;
+    display: inline;
+    position: relative;
+    bottom: 85px;
+    right: 110px;
+    float: right;
+    border-radius: 5px;
+    background-color: white;
+ }
+ div.topBtn:hover{
+     background-color: rgb(1, 36, 151);
+ }
+ div.topBtn a{
+     font-weight: bold;
+     text-decoration: none;
+     font-size: 40px;
+     color:rgb(1, 36, 151);
+ }
+ div.topBtn a:hover{
+     cursor: pointer;
+     color: white;
+ }
+
+
+ @media(max-width: 550px){
+     header{
+         flex-direction: column;
+         align-items: flex-start;
+     }
+     header div.hospLogo img{
+         height: 38vh;
+     }
+     header div.headInfo div.location a{
+        cursor: pointer;
+        background-color: rgb(1, 36, 151);
+        color: white;
+    }
+    .homeRight{
+        display: none;
+    }
+    .scrolldown2{
+        height: 80px;
+        width: 20%;
+        margin-left: 70%;
+        margin-bottom: -55px;
+    }
+    .scrolldown2 img{
+        height: 75px;
+    }
+    div.aboutSec div.aboutRight img{
+        display: none;
+    }
+    .gotoservices{
+        margin: 0px;
+    }
+    .servicesBlock{
+        flex-direction: column;
+    }
+    div.servicesBlock div.section{
+        width: 100%;
+    }
+    div.drNilesh{
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        align-items: center;
+        justify-content: center;
+    }
+    div.drNileshImg{
+        margin-top: 20px;
+    }
+    div.drNileshImg img{
+        margin-left: -50px;
+        width: 330px;
+        height: 250px;
+
+    }
+    div.visitDocsBlock1, div.visitDocsBlock2{
+        flex-direction: column;
+        height: auto;
+    }
+    div.visitDocsBlock1 div.visitDocs, div.visitDocsBlock2 div.visitDocs{
+        width: 95%; height: auto;
+        margin: 10px;
+    }
+    div.chiefStaffBlock{
+        flex-direction: column;
+    }
+    div.chiefStaffBlock div.chiefStaff{
+        flex-direction: column;
+        align-items: center;
+        width: 90%; height: auto;
+    }
+    div.chiefStaffBlock div.chiefStaff div.chiefStaffDes{
+        margin-bottom: 20px;
+    }
+    div.staffBlock div.staff{
+        flex-direction: column;
+        width: 100%; height: auto;
+    }
+    div.staffBlock div.staff div.staffImg img{
+        width: 100%; height: auto;
+    }
+    div.appointBlock{
+        flex-direction: column;
+    }
+    div.appointDisc{
+        width: 98%;
+    }
+    div.appointForm{
+        width: 90%;
+    }
+    div.formTitle{
+        margin: 0px auto 150px auto;
+    }
+    input[type=radio]{
+        display: block;
+        margin-right: 0px;
+        margin-bottom: 20px;
+    }
+    div.contactBlock{
+        flex-direction: column;
+    }
+    div.contactBlock div.contact{
+        border-right: 1px solid white;
+    }
+    div.footer{
+        height: auto;
+    }
+    div.footer p.copyright, div.footer p.developers{
+        position: relative;
+        left: auto;
+        margin-top: 30px;
+        margin-left: 20px;
+    }
+    div.footer p.developers a{
+        display: block;
+        margin: 5px 0px 5px -10px;
+        background-color: rgb(238, 238, 238);
+    }
+    div.footer p.developers a:nth-child(2), div.footer p.developers a:nth-child(3){
+        border-right: none;
+    }
+    div.topBtn{
+        position: relative;
+        bottom: 145px;
+        right: 20px;
+        background-color: rgb(1, 27, 110);
+    }
+    div.topBtn a{
+        cursor: pointer;
+        color: white;
+    }
+}
+
+@media(max-width: 1140px)
+{
+    .navBar{
+        background-color: rgb(1, 26, 102);
+    }
+    .navBar .mainMenu {
+        height: 100vh;
+        position: fixed;
+        top: -125%;
+        right: 0;
+        left: 0;
+        z-index: 1000;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: rgb(1, 26, 102);
+        transition: top 1s ease;
+        display: flex;
+    }
+    .navBar .mainMenu .closeMenu {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+
+    }
+    .navBar .openMenu {
+        display: block;
+        color: white;
+    }
+    .navBar .openMenu:active{
+        background-color: transparent !important;
+    }
+    .navBar .mainMenu li a{
+        color: white;
+    }
+    .navBar .mainMenu li a:hover {
+        background: none;
+        color: rgb(255, 123, 0);
+    }
+    .navBar ul li.button a{
+        background-color: transparent;
+        color: rgb(0, 90, 0);
+        font-weight: bold;
+    }
+    .devs{
+        display: block;
+        color: white;
+        padding-top: 20px;
+        font-family: 'Montserrat';
+        border-top: 1px solid white;
+    }
+    .closeMenu{
+        color: white;
+    }
+    .icons i {
+        display: inline-block;
+        padding: 12px;
+        color: white;
+    }
+    .homeSec{
+        margin-top: 15px;
+    }
+} 
